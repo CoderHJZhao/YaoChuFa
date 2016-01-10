@@ -8,7 +8,7 @@
 
 #import "HWNavigationController.h"
 #import "UIBarButtonItem+Extension.h"
-@interface HWNavigationController ()
+@interface HWNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -19,18 +19,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    __weak typeof (self) weakSelf = self;
     //解决因为自定义导航栏按钮,滑动返回失效的问题
-    
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-
-            
-        self.interactivePopGestureRecognizer.enabled = YES;
-        self.interactivePopGestureRecognizer.delegate = nil;
-
+        self.interactivePopGestureRecognizer.delegate = weakSelf;
     }
 
     self.navigationBar.translucent = NO;
     
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (self.viewControllers.count <= 1) {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated
