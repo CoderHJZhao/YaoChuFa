@@ -1,0 +1,116 @@
+//
+//  CFMineTableView.m
+//  ToStartTravelAround
+//
+//  Created by SkyWalker on 15/7/30.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+
+#import "CFMineTableView.h"
+#import "CFUserInformationModel.h"
+#import "FMDBManager.h"
+@implementation CFMineTableView
+
+//初始化视图
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        
+        [self createView];
+        
+    }
+    return self;
+}
+
+//创建主视图
+- (void)createView{
+    
+    _mainTableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
+    
+    if(IphoneWidth == 375){
+        
+        self.mainTableView.rowHeight = 44;
+        
+    }else if(IphoneWidth == 320){
+        
+        self.mainTableView.rowHeight = 40;
+    }
+    
+    // 注册cell
+    [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+
+    //从xib加载头部视图
+    _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CFHeaderView" owner:self options:nil] objectAtIndex:0];
+    self.headerView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height*0.25);
+    //设置注册按钮的属性
+    self.headerView.avatarBtn.layer.borderWidth = 1;
+    self.headerView.avatarBtn.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.headerView.avatarBtn.layer.cornerRadius = 30;
+    self.headerView.avatarBtn.clipsToBounds = YES;
+    
+    //设置头部积分按钮的属性
+    self.headerView.pointBtn.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.headerView.pointBtn.layer.borderWidth = 1;
+  
+    //设置头部现金券的属性
+    self.headerView.ticketBtn.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.headerView.ticketBtn.layer.borderWidth = 1;
+    
+    //设置头部背景图片的autoresizingMask
+    self.headerView.backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight| UIViewAutoresizingFlexibleWidth;
+    self.headerView.backgroundImageView.clipsToBounds = YES;
+    
+    //设置自定义头部视图
+    _header = [CFExpandHeader expandWithScrollView:self.mainTableView expandView:self.headerView];
+    [self addSubview:_mainTableView];
+ 
+}
+
+
+
+
+
+-(void)showLoginStatusView{
+
+    //当为登陆状态时，tableView不能滚动
+    self.mainTableView.scrollEnabled =NO;
+    // 直接获取数据
+    CFUserInformationModel *userInfoModel = [[[FMDBManager sharedInstace] selectModelArrayInDatabase:@"CFUserInformationModel"] objectAtIndex:0];
+    //给UserNameLabel赋值
+    self.headerView.phoneNumLabel.text = userInfoModel.userName;
+    //给PhoneNumLabel赋值
+    self.headerView.userNameLabel.text = [NSString stringWithFormat:@"手机: %@", userInfoModel.phone];
+    self.headerView.emailLabel.text = @"邮箱: 点此设置";
+    //设置头部按钮的情况
+    self.headerView.backgroundImageView.image = [UIImage imageNamed:@"my_top_img"];
+    self.headerView.phoneNumLabel.hidden = NO;
+    self.headerView.userNameLabel.hidden = NO;
+    self.headerView.emailLabel.hidden = NO;
+    [self.headerView.pointBtn setTitle:@"积分 150" forState:UIControlStateNormal];
+    [self.headerView.ticketBtn setTitle:@"现金券 1" forState:UIControlStateNormal];
+    
+    //隐藏登录和头像按钮
+    self.headerView.loginBtn.hidden = YES;
+    self.headerView.avatarBtn.hidden = YES;
+    
+}
+
+-(void)showUnloginStatusView{
+
+    //设置未登录状态下的显示结果
+    [self.headerView.pointBtn setTitle:@"积分" forState:UIControlStateNormal];
+    [self.headerView.ticketBtn setTitle:@"现金券" forState:UIControlStateNormal];
+    self.headerView.loginBtn.hidden = NO;
+    self.headerView.avatarBtn.hidden = NO;
+    self.headerView.backgroundImageView.image = [UIImage imageNamed:@"page_cover_default_background.jpg"];
+    self.headerView.phoneNumLabel.hidden = YES;
+    self.headerView.userNameLabel.hidden = YES;
+    self.headerView.emailLabel.hidden = YES;
+
+}
+
+@end
+
+
+

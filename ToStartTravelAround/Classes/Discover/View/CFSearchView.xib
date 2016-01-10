@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CFSearchView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="历史记录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-IE-PV7">
+                    <rect key="frame" x="10" y="10" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="MKg-L2-kBZ"/>
+                        <constraint firstAttribute="height" constant="20" id="zlo-qd-bIU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.45063219572368424" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-uJ-Ttw">
+                    <rect key="frame" x="10" y="40" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ALR-Rf-zC0"/>
+                        <constraint firstAttribute="width" constant="120" id="jO7-M5-i53"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="深圳">
+                        <color key="titleColor" white="0.0098427220394736847" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="jO7-M5-i53"/>
+                        </mask>
+                    </variation>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门搜索" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvX-xj-UGw">
+                    <rect key="frame" x="10" y="90" width="60" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.41773745888157893" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGT-oH-pSx">
+                    <rect key="frame" x="10" y="120" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ebV-CM-WuZ"/>
+                    </constraints>
+                    <state key="normal" title="深圳">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6W-UQ-Xfm">
+                    <rect key="frame" x="205" y="120" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="NUW-cn-LIq"/>
+                    </constraints>
+                    <state key="normal" title="巽寮湾">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E39-GT-o7e">
+                    <rect key="frame" x="400" y="120" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WA2-YE-ahK"/>
+                    </constraints>
+                    <state key="normal" title="惠州">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ah-4l-TOB">
+                    <rect key="frame" x="10" y="155" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="u21-LW-BqZ"/>
+                    </constraints>
+                    <state key="normal" title="温泉">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKp-gQ-Ce3">
+                    <rect key="frame" x="205" y="155" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WW9-Tk-Op0"/>
+                    </constraints>
+                    <state key="normal" title="长隆">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOp-gz-3dJ">
+                    <rect key="frame" x="400" y="155" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="CJw-OP-yCr"/>
+                    </constraints>
+                    <state key="normal" title="厦门">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W78-b7-ehj">
+                    <rect key="frame" x="10" y="190" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="An9-Y5-nen"/>
+                    </constraints>
+                    <state key="normal" title="东部华侨城">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUS-gS-ovb">
+                    <rect key="frame" x="205" y="190" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="广州">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMn-hu-0vd">
+                    <rect key="frame" x="400" y="190" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="港澳游">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcC-Ot-0e5">
+                    <rect key="frame" x="10" y="225" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="阳江">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCf-MM-8dI">
+                    <rect key="frame" x="205" y="225" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="香港">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vF-MX-NbO">
+                    <rect key="frame" x="400" y="225" width="190" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="三亚">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGy-kf-iWB">
+                    <rect key="frame" x="564" y="10" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="6fo-iD-gqv"/>
+                        <constraint firstAttribute="width" constant="26" id="uF9-hd-mkg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="search_delete_history_icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.88815789473684226" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GMn-hu-0vd" secondAttribute="trailing" constant="10" id="1Vs-Le-559"/>
+                <constraint firstItem="E39-GT-o7e" firstAttribute="leading" secondItem="x6W-UQ-Xfm" secondAttribute="trailing" constant="5" id="1mU-Eb-gNi"/>
+                <constraint firstItem="tFt-IE-PV7" firstAttribute="leading" secondItem="vvX-xj-UGw" secondAttribute="leading" id="2YW-3a-vcA"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="width" secondItem="7vF-MX-NbO" secondAttribute="width" id="397-zQ-XZP"/>
+                <constraint firstAttribute="trailing" secondItem="LGy-kf-iWB" secondAttribute="trailing" constant="10" id="3Ha-O0-1fU"/>
+                <constraint firstItem="MOp-gz-3dJ" firstAttribute="width" secondItem="sKp-gQ-Ce3" secondAttribute="width" id="4QB-Kh-UOv"/>
+                <constraint firstItem="hbo-uJ-Ttw" firstAttribute="width" secondItem="kGT-oH-pSx" secondAttribute="width" id="6gR-us-L5R"/>
+                <constraint firstItem="MOp-gz-3dJ" firstAttribute="height" secondItem="sKp-gQ-Ce3" secondAttribute="height" id="7UQ-h9-cE1"/>
+                <constraint firstItem="lCf-MM-8dI" firstAttribute="top" secondItem="7vF-MX-NbO" secondAttribute="top" id="7nI-Jv-Hr8"/>
+                <constraint firstItem="hbo-uJ-Ttw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="7p3-Qo-agB"/>
+                <constraint firstItem="MOp-gz-3dJ" firstAttribute="height" secondItem="0ah-4l-TOB" secondAttribute="height" id="9B0-Kq-9bq"/>
+                <constraint firstItem="vvX-xj-UGw" firstAttribute="top" secondItem="hbo-uJ-Ttw" secondAttribute="bottom" constant="20" id="BAW-7P-7bH"/>
+                <constraint firstAttribute="trailing" secondItem="E39-GT-o7e" secondAttribute="trailing" constant="10" id="Cnr-hV-NLo"/>
+                <constraint firstItem="GMn-hu-0vd" firstAttribute="width" secondItem="W78-b7-ehj" secondAttribute="width" id="Dh2-F6-Ynz"/>
+                <constraint firstAttribute="trailing" secondItem="7vF-MX-NbO" secondAttribute="trailing" constant="10" id="E2i-5t-mUR"/>
+                <constraint firstItem="tFt-IE-PV7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Eun-oV-EBq"/>
+                <constraint firstItem="0ah-4l-TOB" firstAttribute="top" secondItem="MOp-gz-3dJ" secondAttribute="top" id="FwY-w4-WKj"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="top" secondItem="0ah-4l-TOB" secondAttribute="bottom" constant="5" id="G5V-zl-Llk"/>
+                <constraint firstItem="GMn-hu-0vd" firstAttribute="height" secondItem="ZUS-gS-ovb" secondAttribute="height" id="GsL-tZ-C8u"/>
+                <constraint firstItem="kGT-oH-pSx" firstAttribute="top" secondItem="vvX-xj-UGw" secondAttribute="bottom" constant="10" id="HIV-e3-Ac4"/>
+                <constraint firstItem="kGT-oH-pSx" firstAttribute="height" secondItem="x6W-UQ-Xfm" secondAttribute="height" id="HTX-se-9LA"/>
+                <constraint firstItem="ZUS-gS-ovb" firstAttribute="top" secondItem="W78-b7-ehj" secondAttribute="top" id="I9f-EM-QxV"/>
+                <constraint firstItem="tFt-IE-PV7" firstAttribute="top" secondItem="LGy-kf-iWB" secondAttribute="top" id="Jgl-sP-PiO"/>
+                <constraint firstItem="tFt-IE-PV7" firstAttribute="width" secondItem="vvX-xj-UGw" secondAttribute="width" id="KIA-md-CSS"/>
+                <constraint firstItem="0ah-4l-TOB" firstAttribute="leading" secondItem="kGT-oH-pSx" secondAttribute="leading" id="Nj9-xD-pJ7"/>
+                <constraint firstItem="hbo-uJ-Ttw" firstAttribute="top" secondItem="tFt-IE-PV7" secondAttribute="bottom" constant="10" id="Onw-5K-K9c"/>
+                <constraint firstItem="7vF-MX-NbO" firstAttribute="leading" secondItem="lCf-MM-8dI" secondAttribute="trailing" constant="5" id="PbL-Kd-teX"/>
+                <constraint firstItem="x6W-UQ-Xfm" firstAttribute="top" secondItem="E39-GT-o7e" secondAttribute="top" id="Qfo-vG-CCn"/>
+                <constraint firstItem="x6W-UQ-Xfm" firstAttribute="leading" secondItem="kGT-oH-pSx" secondAttribute="trailing" constant="5" id="Seo-gS-qdE"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="height" secondItem="LcC-Ot-0e5" secondAttribute="height" id="U4L-Nu-U56"/>
+                <constraint firstItem="ZUS-gS-ovb" firstAttribute="leading" secondItem="W78-b7-ehj" secondAttribute="trailing" constant="5" id="UNq-Ys-6AO"/>
+                <constraint firstItem="kGT-oH-pSx" firstAttribute="width" secondItem="x6W-UQ-Xfm" secondAttribute="width" id="WHn-qO-wSV"/>
+                <constraint firstItem="lCf-MM-8dI" firstAttribute="leading" secondItem="LcC-Ot-0e5" secondAttribute="trailing" constant="5" id="WWe-Jj-cxb"/>
+                <constraint firstItem="vvX-xj-UGw" firstAttribute="leading" secondItem="kGT-oH-pSx" secondAttribute="leading" id="XOE-sq-BZy"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="height" secondItem="lCf-MM-8dI" secondAttribute="height" id="Yo7-ja-zRO"/>
+                <constraint firstItem="tFt-IE-PV7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Zah-C6-imB"/>
+                <constraint firstAttribute="trailing" secondItem="MOp-gz-3dJ" secondAttribute="trailing" constant="10" id="c5f-AE-smT"/>
+                <constraint firstItem="GMn-hu-0vd" firstAttribute="height" secondItem="W78-b7-ehj" secondAttribute="height" id="cIi-Gn-9c3"/>
+                <constraint firstItem="x6W-UQ-Xfm" firstAttribute="top" secondItem="kGT-oH-pSx" secondAttribute="top" id="cK6-Dn-Vo3"/>
+                <constraint firstItem="LcC-Ot-0e5" firstAttribute="top" secondItem="W78-b7-ehj" secondAttribute="bottom" constant="5" id="dlg-Md-Zp0"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="width" secondItem="LcC-Ot-0e5" secondAttribute="width" id="ekA-LT-vpX"/>
+                <constraint firstItem="sKp-gQ-Ce3" firstAttribute="leading" secondItem="0ah-4l-TOB" secondAttribute="trailing" constant="5" id="fWg-ue-L7Q"/>
+                <constraint firstItem="kGT-oH-pSx" firstAttribute="height" secondItem="E39-GT-o7e" secondAttribute="height" id="gtq-5x-tH4"/>
+                <constraint firstItem="MOp-gz-3dJ" firstAttribute="width" secondItem="0ah-4l-TOB" secondAttribute="width" id="hb9-G5-g9G"/>
+                <constraint firstItem="lCf-MM-8dI" firstAttribute="top" secondItem="LcC-Ot-0e5" secondAttribute="top" id="heQ-gm-VUB"/>
+                <constraint firstItem="MOp-gz-3dJ" firstAttribute="leading" secondItem="sKp-gQ-Ce3" secondAttribute="trailing" constant="5" id="jlX-de-OxA"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="width" secondItem="lCf-MM-8dI" secondAttribute="width" id="laa-vl-urF"/>
+                <constraint firstItem="0ah-4l-TOB" firstAttribute="top" secondItem="kGT-oH-pSx" secondAttribute="bottom" constant="5" id="pUL-Uo-cB1"/>
+                <constraint firstItem="GMn-hu-0vd" firstAttribute="leading" secondItem="ZUS-gS-ovb" secondAttribute="trailing" constant="5" id="paO-XG-tRL"/>
+                <constraint firstItem="ZUS-gS-ovb" firstAttribute="top" secondItem="GMn-hu-0vd" secondAttribute="top" id="ppG-zm-rZG"/>
+                <constraint firstItem="GMn-hu-0vd" firstAttribute="width" secondItem="ZUS-gS-ovb" secondAttribute="width" id="qD3-Ro-Tdw"/>
+                <constraint firstItem="tFt-IE-PV7" firstAttribute="height" secondItem="vvX-xj-UGw" secondAttribute="height" id="rcM-q9-DMo"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="uXf-cz-M09"/>
+                <constraint firstItem="kGT-oH-pSx" firstAttribute="width" secondItem="E39-GT-o7e" secondAttribute="width" id="ucP-aQ-Ks8"/>
+                <constraint firstItem="W78-b7-ehj" firstAttribute="height" secondItem="7vF-MX-NbO" secondAttribute="height" id="xeh-h6-rYS"/>
+                <constraint firstItem="0ah-4l-TOB" firstAttribute="top" secondItem="sKp-gQ-Ce3" secondAttribute="top" id="yJb-mx-LFw"/>
+            </constraints>
+            <point key="canvasLocation" x="446" y="227"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search_delete_history_icon" width="13" height="13"/>
+    </resources>
+</document>

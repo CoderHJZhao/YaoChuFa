@@ -1,0 +1,218 @@
+//
+//  CFSettingController.m
+//  ToStartTravelAround
+//
+//  Created by SkyWalker on 15/8/4.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+#import "CFSettingController.h"
+#import "CFUserInformationModel.h"
+#import "CFSettingGroupModel.h"
+#import "CFSettingModel.h"
+#import "CFTeamViewController.h"
+@interface CFSettingController ()<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *settingTableView;//设置页面
+@property (nonatomic, strong) NSMutableArray *dataSoure;//数据源
+
+@end
+
+@implementation CFSettingController
+
+#pragma mark - ====================== 生命周期 ==========================
+//懒加载
+-(NSMutableArray *)dataSoure{
+    
+    if (!_dataSoure) {
+        
+        _dataSoure = [NSMutableArray new];
+    }
+    return _dataSoure;
+}
+
+
+-(void)loadView{
+
+    [super loadView];
+
+    [self createView];
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self addGroup];
+    
+    
+   }
+
+#pragma mark - ====================== 创建视图 ==========================
+
+-(void)createView{
+    
+    self.title = @"常用设置";
+
+    UITableView *settingTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    settingTableView.delegate = self;
+    settingTableView.dataSource = self;
+    //注册cell
+    [settingTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    self.settingTableView = settingTableView;
+    [self.view addSubview:settingTableView];
+}
+
+#pragma mark - ====================== 数据相关 ==========================
+
+-(void)addGroup{
+    
+    [self addGroupOne];
+    [self addGroupTwo];
+    [self addGroupThree];
+    
+    //当状态为登录的时候加载第四组cell
+    if ([LOGINSTATUS isEqualToString:@"login"]) {
+        
+        [self addGroupFour];
+        
+    }
+    
+
+
+}
+
+-(void)addGroupOne{
+    
+    CFSettingGroupModel *group = [CFSettingGroupModel new];
+    CFSettingModel *row1 = [CFSettingModel new];
+    
+    row1.cellName = @"非Wi—网络下显示图片";
+    
+    CFSettingModel *row2 = [CFSettingModel new];
+    row2.cellName = @"通知设置";
+    
+    CFSettingModel *row3 = [CFSettingModel new];
+    row3.cellName = @"清除缓存";
+    
+    group.cellNameArray = @[row1,row2, row3];
+    
+    [self.dataSoure addObject:group];
+
+}
+
+-(void)addGroupTwo{
+
+    CFSettingGroupModel *group = [CFSettingGroupModel new];
+    CFSettingModel *row1 = [CFSettingModel new];
+
+    row1.cellName = @"给个鼓励吧";
+    
+    CFSettingModel *row2 = [CFSettingModel new];
+    row2.cellName = @"意见反馈";
+    
+    CFSettingModel *row3 = [CFSettingModel new];
+    row3.cellName = @"开发团队";
+
+  
+    group.cellNameArray = @[row1, row2,row3];
+    [self.dataSoure addObject:group];
+}
+
+
+-(void)addGroupThree{
+
+    CFSettingGroupModel *group = [CFSettingGroupModel new];
+    CFSettingModel *row1 = [CFSettingModel new];
+    row1.cellName = @"当前版本";
+    
+    CFSettingModel *row2 = [CFSettingModel new];
+    row2.cellName = @"使用帮助";
+    
+    CFSettingModel *row3 = [CFSettingModel new];
+    row3.cellName = @"拨打服务热线：400-118-1166";
+    
+    group.cellNameArray = @[row1, row2, row3];
+    [self.dataSoure addObject:group];
+}
+
+-(void)addGroupFour{
+    
+    CFSettingGroupModel *group = [CFSettingGroupModel new];
+    CFSettingModel *row1 = [CFSettingModel new];
+    row1.cellName = @"退出登录";
+    
+    group.cellNameArray = @[row1];
+    [self.dataSoure addObject:group];
+
+}
+
+#pragma mark - ====================== 协议代理方法 ==========================
+
+
+#pragma mark - UITableView代理方法
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+    return self.dataSoure.count;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    CFSettingGroupModel *group = self.dataSoure[section];
+    
+    return group.cellNameArray.count;
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.font = [UIFont systemFontOfSize:13];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    CFSettingGroupModel *group = self.dataSoure[indexPath.section];
+    CFSettingModel *model = group.cellNameArray[indexPath.row];
+    cell.textLabel.text = model.cellName;
+    
+    return cell;
+    
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    
+    CFSettingGroupModel *group = self.dataSoure[indexPath.section];
+    CFSettingModel *model = group.cellNameArray[indexPath.row];
+    if ([model.cellName isEqualToString:@"退出登录"]) {
+        // 首先把状态值设置为 unlogin
+        [[NSUserDefaults standardUserDefaults] setValue:@"unlogin" forKey:@"loginStatus"];
+        // 清除数据表中userInfoModel值
+        CFUserInformationModel *userInfoModel = [CFUserInformationModel sharedInstance];
+        [[FMDBManager sharedInstace]deleteModelInDatabase:userInfoModel];
+        [userInfoModel setValuesForKeysWithDictionary:nil];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    if ([model.cellName isEqualToString:@"开发团队"]) {
+        [UIView animateWithDuration:0.25 animations:^{
+            CFTeamViewController *team = [[CFTeamViewController alloc]init];
+            [self.navigationController pushViewController:team animated:YES];
+        }];
+    }
+
+}
+
+//设置尾部
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+
+    return 5;
+}
+
+//设置头部
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 5;
+}
+
+@end

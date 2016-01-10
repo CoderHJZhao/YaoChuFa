@@ -1,0 +1,87 @@
+//
+//  CFDetailViewController.m
+//  ToStartTravelAround
+//
+//  Created by mac on 15/8/10.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+#import "CFDetailViewController.h"
+#import "CFVDetailView.h"
+#import "CFNetWork.h"
+#import "CFDetailScrollView.h"
+#import "CFDetailPageModel.h"
+#import "UIButton+Extension.h"
+#define MAS_SHORTHAND_GLOBALS
+#define MAS_SHORTHAND
+#import "Masonry.h"
+@interface CFDetailViewController()
+{
+    NSArray *_detailDataArr;
+    
+}
+@property(nonatomic, strong)CFVDetailView *detailView;
+@property(nonatomic, strong)CFDetailScrollViewView *detailScrollView;
+@end
+@implementation CFDetailViewController
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self createView];
+    [self createRightNavBtn];
+    [self detailDataRequest];
+}
+#pragma mark =========================视图相关=============================
+- (void)createView
+{
+    self.title = @"详情";
+    _detailView = [[CFVDetailView alloc]initWithFrame:self.view.bounds];
+    self.view = _detailView;
+//    _detailView.tableView.delegate = self;
+//    _detailView.tableView.dataSource = self;
+    _detailScrollView = [[CFDetailScrollViewView alloc]initWithFrame:CGRectMake(0, 0, IphoneWidth, 150)];
+//    _detailView.tableView.tableHeaderView = _detailScrollView;
+    [_detailView.scrollView addSubview:_detailScrollView];
+    
+    
+}
+- (void)createRightNavBtn
+{
+
+    UIButton *shareBtn = [UIButton btnWithTarget:self action:@selector(shareClicked:) image:@"detail_nav_bar_share_icon" selectImage:@"detail_nav_bar_mark_icon_current"];
+    UIButton *collectBtn = [UIButton btnWithTarget:self action:@selector(collectClicked) image:@"detail_nav_bar_mark_icon" selectImage:@"detail_nav_bar_mark_icon@2x"];
+    UIBarButtonItem *shareBBI = [[UIBarButtonItem alloc]initWithCustomView:shareBtn];
+    UIBarButtonItem *collectBBI = [[UIBarButtonItem alloc]initWithCustomView:collectBtn];
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    bbi.width = 20;
+    self.navigationItem.rightBarButtonItems = @[shareBBI,bbi,collectBBI];
+    
+}
+#pragma mark =========================调用方法=============================
+- (void)shareClicked:(UIBarButtonItem *)bbi
+{
+    
+}
+- (void)collectClicked
+{
+    
+}
+#pragma mark =========================数据请求=============================
+- (void)detailDataRequest
+{
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    dic[@"machineCode"]= @"0316B31D-CEAE-4C94-A3F8-F5BB581B0CE3";
+    dic[@"productId"] = _productId;
+    dic[@"system"] = @"ios";
+    dic[@"version"] = @"4.2.6";
+    dic[@"channel"] = @"AppStore";
+    [CFNetWork networkAroundDetailPageRequest:dic whileSuccess:^(CFDetailPageModel *responseObject) {
+        [_detailScrollView reloadHeaderView:responseObject.imageList];
+        [_detailView.tableView reloadData];
+    } orFail:^(id responseObject) {
+        
+    }];
+}
+#pragma mark =========================代理方法=============================
+#pragma mark - TableView的代理方法
+@end

@@ -1,0 +1,35 @@
+//
+//  CFMacro.pch
+//  ToStartTravelAround
+//
+//  Created by mac on 15/7/30.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+#ifndef ToStartTravelAround_CFMacro_pch
+#define ToStartTravelAround_CFMacro_pch
+#import "UIBarButtonItem+Extension.h"
+#import "CFAdress.h"
+
+#import "UIView+Extension.h"
+#define CFColor(r,g,b)  [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
+#define selfWidth self.bounds.size.width
+#define selfHeight self.bounds.size.height
+
+#define IphoneWidth [UIScreen mainScreen].bounds.size.width
+#define IphoneHeight [UIScreen mainScreen].bounds.size.height
+// 程序主窗体
+#define KeyWindow [UIApplication sharedApplication].keyWindow
+//判断系统版本
+#define DeviceVersion [UIDevice currentDevice].systemVersion.doubleValue
+
+// 用户登录状态(unlogin/login)
+#define LOGINSTATUS [[NSUserDefaults standardUserDefaults]valueForKey:@"loginStatus"]
+
+#define DeviceToken [[NSUserDefaults standardUserDefaults]valueForKey:@"deviceToken"]
+//记录城市Code
+#define City_Code [[NSUserDefaults standardUserDefaults]valueForKey:@"cityCode"]
+
+//拼接周边页面的图片链接
+#define AROUNDURLWITH(str)  [NSString stringWithFormat:@"http://cdn5.yaochufa.com/%@",str]
+#endif

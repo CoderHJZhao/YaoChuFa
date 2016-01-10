@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CFListHistoryView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_history_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-xc-kIL">
+                    <rect key="frame" x="260" y="100" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="MQW-2N-R0H"/>
+                        <constraint firstAttribute="height" constant="80" id="wC1-rG-SeC"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您浏览过的普通旅游产品（酒店套票、门票等）会在此显示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPh-LD-u1T">
+                    <rect key="frame" x="10" y="190" width="580" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="9F1-ZA-jUi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.58838383838383845" green="0.58838383838383845" blue="0.58838383838383845" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hs-2c-CLt">
+                    <rect key="frame" x="80" y="220" width="440" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="JLj-BC-oav"/>
+                    </constraints>
+                    <state key="normal" title="看看周边有什么好玩的&gt;&gt;">
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sender:" destination="iN0-l3-epB" eventType="touchUpInside" id="2J2-o3-d6c"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hPh-LD-u1T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6Gp-mc-MGn"/>
+                <constraint firstAttribute="trailing" secondItem="hPh-LD-u1T" secondAttribute="trailing" constant="10" id="G8M-Hz-TuD"/>
+                <constraint firstItem="6Hs-2c-CLt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="80" id="KHq-mt-bPq"/>
+                <constraint firstAttribute="trailing" secondItem="6Hs-2c-CLt" secondAttribute="trailing" constant="80" id="KjG-og-3Ks"/>
+                <constraint firstItem="6Hs-2c-CLt" firstAttribute="top" secondItem="hPh-LD-u1T" secondAttribute="bottom" constant="10" id="VM9-GA-mtD"/>
+                <constraint firstAttribute="centerX" secondItem="ciT-xc-kIL" secondAttribute="centerX" id="den-m5-FEv"/>
+                <constraint firstItem="ciT-xc-kIL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="hMA-Xu-81s"/>
+                <constraint firstItem="hPh-LD-u1T" firstAttribute="top" secondItem="ciT-xc-kIL" secondAttribute="bottom" constant="10" id="zKv-Ej-Y6o"/>
+            </constraints>
+            <connections>
+                <outlet property="sender" destination="6Hs-2c-CLt" id="HaA-9q-qCN"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_history_icon" width="94" height="94"/>
+    </resources>
+</document>

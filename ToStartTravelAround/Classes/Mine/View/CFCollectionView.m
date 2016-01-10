@@ -1,0 +1,20 @@
+
+//
+//  CFCollectionView.m
+//  ToStartTravelAround
+//
+//  Created by SkyWalker on 15/8/11.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+#import "CFCollectionView.h"
+
+@implementation CFCollectionView
+
+- (IBAction)sender:(id)sender {
+    
+    self.sendBlock(sender);
+}
+
+
+@end

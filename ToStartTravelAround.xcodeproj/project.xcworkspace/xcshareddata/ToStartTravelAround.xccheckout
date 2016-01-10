@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1731841B-A1AB-4014-A376-DAC360B1D1B1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ToStartTravelAround</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>81e2bdeb-2df8-406a-97b0-76171ac8c15f++651</key>
+		<string>svn://10.2.162.250/student48/ToStartTravelAround</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ToStartTravelAround.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>81e2bdeb-2df8-406a-97b0-76171ac8c15f++651</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>81e2bdeb-2df8-406a-97b0-76171ac8c15f++651</key>
+		<string>svn://10.2.162.250/student48</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://10.2.162.250/student48/ToStartTravelAround/ToStartTravelAround.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>81e2bdeb-2df8-406a-97b0-76171ac8c15f++651</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>81e2bdeb-2df8-406a-97b0-76171ac8c15f++651</string>
+			<key>IDESourceControlWCCName</key>
+			<string>0815ToStartTravelAround</string>
+		</dict>
+	</array>
+</dict>
+</plist>

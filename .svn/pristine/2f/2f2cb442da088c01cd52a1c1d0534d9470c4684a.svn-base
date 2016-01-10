@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6Ja-wN-Pxh" customClass="CFCollectionView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_mark_icon" translatesAutoresizingMaskIntoConstraints="NO" id="M9d-E9-FzS">
+                    <rect key="frame" x="260" y="100" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="AZB-zz-3sF"/>
+                        <constraint firstAttribute="width" constant="80" id="GgL-TR-r9E"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 您还没有任何收藏哦~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR0-fv-pcF">
+                    <rect key="frame" x="10" y="190" width="580" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="6NW-q8-lty"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.58838383839999997" green="0.58838383839999997" blue="0.58838383839999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrN-Gs-bA2">
+                    <rect key="frame" x="80" y="220" width="440" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="zq6-nV-jps"/>
+                    </constraints>
+                    <state key="normal" title="看看周边有什么好玩的&gt;&gt;">
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NrN-Gs-bA2" secondAttribute="trailing" constant="80" id="4GZ-P2-Mr9"/>
+                <constraint firstItem="AR0-fv-pcF" firstAttribute="top" secondItem="M9d-E9-FzS" secondAttribute="bottom" constant="10" id="EmC-g3-oh9"/>
+                <constraint firstItem="AR0-fv-pcF" firstAttribute="leading" secondItem="6Ja-wN-Pxh" secondAttribute="leading" constant="10" id="Qtp-zT-xdG"/>
+                <constraint firstAttribute="centerX" secondItem="M9d-E9-FzS" secondAttribute="centerX" id="WGj-NJ-npg"/>
+                <constraint firstAttribute="trailing" secondItem="AR0-fv-pcF" secondAttribute="trailing" constant="10" id="dUz-47-WyW"/>
+                <constraint firstItem="M9d-E9-FzS" firstAttribute="top" secondItem="6Ja-wN-Pxh" secondAttribute="top" constant="100" id="kej-cH-bDj"/>
+                <constraint firstItem="NrN-Gs-bA2" firstAttribute="top" secondItem="AR0-fv-pcF" secondAttribute="bottom" constant="10" id="qU7-JU-0C8"/>
+                <constraint firstItem="NrN-Gs-bA2" firstAttribute="leading" secondItem="6Ja-wN-Pxh" secondAttribute="leading" constant="80" id="s8S-w5-cMZ"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_mark_icon" width="94" height="94"/>
+    </resources>
+</document>

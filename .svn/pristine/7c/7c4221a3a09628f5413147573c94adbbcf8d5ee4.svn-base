@@ -1,0 +1,134 @@
+//
+//  CFPointsController.m
+//  ToStartTravelAround
+//
+//  Created by SkyWalker on 15/8/10.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+#import "CFPointsController.h"
+#import "CFPointCell.h"
+#import "CFPointsModel.h"
+#import "CFPointDetailModel.h"
+#import "CFPointCell1.h"
+
+@interface CFPointsController ()<UITableViewDataSource, UITableViewDelegate>
+{
+    NSString  *_userID;//用户Id
+}
+@property (nonatomic, strong)UITableView *pointTableView;
+@property (nonatomic, strong)NSMutableArray *pointArray;
+
+@end
+
+@implementation CFPointsController
+
+-(void)loadView{
+    
+    [super loadView];
+    [self createView];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self pointRequest];
+
+}
+
+#pragma mark - ====================== 视图创建 ==========================
+
+-(void)createView{
+
+    self.title = @"我的积分";
+    
+    _pointTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    
+    
+    self.pointTableView.rowHeight = 60;
+    self.pointTableView.delegate = self;
+    self.pointTableView.dataSource = self;
+    
+    //注册cell
+    [self.pointTableView registerNib:[UINib nibWithNibName:@"CFPointCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    [self.pointTableView registerNib:[UINib nibWithNibName:@"CFPointCell1" bundle:nil] forCellReuseIdentifier:@"cell1" ];
+    
+    [self.view addSubview:self.pointTableView];
+
+}
+
+
+
+#pragma mark - ====================== 数据请求 ==========================
+
+-(void)pointRequest{
+   
+ CFUserInformationModel *userInfoModel  = [[[FMDBManager sharedInstace] selectModelArrayInDatabase:@"CFUserInformationModel"] objectAtIndex:0];
+
+    _userID = userInfoModel.userId;
+    
+  //  NSDictionary *params =
+//  @{@"system":@"ios", @"channel":@"AppStore", @"securityKey":@"YKR0EfQ85rTZaQ27Iij2T1qHjOH3U%252Fh6lIPkAOgeVQ0Y2j9eWMCzq73EXcFTdksc7xVTD6LOvZIvWKq%252F%252FPTD%252F%252BAU4TSgJgYyTCk3dzOgtoXGSAuSIqSahN907VfR4noAtNrLfImpmULLrCe2g0mtuw%253D%253D", @"version":@"4.2.6", @"total":@"0", @"machineCode":@"E2294D1A-3DE7-4A9B-8BE6-AE67C0A594BE", @"pageIndex":@"1", @"pageSize":@"10", @"userId":@"2649026"};
+   
+    
+   // ?system=ios&pageSize=10&userId=2649026&channel=AppStore&securityKey=YKR0EfQ85rTZaQ27Iij2T1qHjOH3U%252Fh6lIPkAOgeVQ0Y2j9eWMCzq73EXcFTdksc7xVTD6LOvZIvWKq%252F%252FPTD%252F%252BAU4TSgJgYyTCk3dzOgtoXGSAuSIqSahN907VfR4noAtNrLfImpmULLrCe2g0mtuw%253D%253D&version=4.2.6&total=0&machineCode=E2294D1A-3DE7-4A9B-8BE6-AE67C0A594BE&pageIndex=1
+    
+    
+    NSString *params = @"system=ios&pageSize=10&userId=2649026&channel=AppStore&securityKey=YKR0EfQ85rTZaQ27Iij2T1qHjOH3U%252Fh6lIPkAOgeVQ0Y2j9eWMCzq73EXcFTdksc7xVTD6LOvZIvWKq%252F%252FPTD%252F%252BAU4TSgJgYyTCk3dzOgtoXGSAuSIqSahN907VfR4noAtNrLfImpmULLrCe2g0mtuw%253D%253D&version=4.2.6&total=0&machineCode=E2294D1A-3DE7-4A9B-8BE6-AE67C0A594BE&pageIndex=1";
+    
+    [CFNetWork networkMinePointsRequest:params whileSuccess:^(id responseObject) {
+        
+        self.pointArray = responseObject;
+        
+      [self.pointTableView reloadData];
+      
+    } orFail:^(id responseObject) {
+        
+    }];
+}
+
+
+#pragma mark - ====================== 协议代理方法 ==========================
+
+#pragma mark - UITableView代理方法
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+    return 2;
+
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if(section == 1 ){
+    
+        return  [[self.pointArray[0] valueForKey:@"credits"] count];
+    }
+    
+    return 1;
+   
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 0 ) {
+        
+        CFPointCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
+        
+        cell.reminderLabel.text = [self.pointArray[0] valueForKey:@"balance"];
+        cell.usedLabel.text = [self.pointArray[0] valueForKey:@"used"];
+        return cell;
+                                   
+    }else {
+    
+        CFPointCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+        cell.timeLabel.text = [[self.pointArray[0] valueForKey:@"credits"][indexPath.row] valueForKey:@"date"];
+    
+        return cell;
+    }
+    
+}
+
+@end

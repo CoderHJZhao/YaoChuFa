@@ -1,0 +1,15 @@
+//
+//  CFUserGroupModel.m
+//  ToStartTravelAround
+//
+//  Created by SkyWalker on 15/8/10.
+//  Copyright (c) 2015年 mac. All rights reserved.
+//
+
+#import "CFUserGroupModel.h"
+
+@implementation CFUserGroupModel
+
+
+
+@end
