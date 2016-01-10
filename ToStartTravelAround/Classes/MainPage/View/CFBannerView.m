@@ -78,7 +78,7 @@
 }
 - (void)addTimer
 {
-     _timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(changePic:) userInfo:nil repeats:YES];
+     _timer = [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(changePic:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 - (void)changePic:(NSTimer *)timer

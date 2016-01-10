@@ -9,7 +9,7 @@
 #import "MyTabBarController.h"
 #import "MyButton.h"
 #import "HWNavigationController.h"
-
+#import "BHBPopView.h"
 
 @interface MyTabBarController ()
 {
@@ -82,6 +82,7 @@
             [_btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted@2x"] forState:UIControlStateHighlighted];
             _btn.iconImageView.frame = CGRectMake(0, 0, 30, 30);
             _btn.iconImageView.center = CGPointMake(_btn.frame.size.width/2, _btn.frame.size.height/2);
+            [_btn addTarget:self action:@selector(composeBtnCliked)  forControlEvents:UIControlEventTouchUpInside];
         }
         else
         {
@@ -115,6 +116,19 @@
     }
     self.selectedIndex = btn.tag;
 }
+
+- (void)composeBtnCliked
+{
+    BHBItem * item0 = [[BHBItem alloc]initWithTitle:@"Text" Icon:@"images.bundle/tabbar_compose_idea"];
+    BHBItem * item1 = [[BHBItem alloc]initWithTitle:@"Albums" Icon:@"images.bundle/tabbar_compose_photo"];
+    BHBItem * item2 = [[BHBItem alloc]initWithTitle:@"Camera" Icon:@"images.bundle/tabbar_compose_camera"];
+    BHBItem * item3 = [[BHBItem alloc]initWithTitle:@"Check in" Icon:@"images.bundle/tabbar_compose_lbs"];
+    BHBItem * item4 = [[BHBItem alloc]initWithTitle:@"Review" Icon:@"images.bundle/tabbar_compose_review"];
+    BHBItem * item5 = [[BHBItem alloc]initWithTitle:@"More" Icon:@"images.bundle/tabbar_compose_more"];
+    //添加popview
+    [BHBPopView showToView:self.view withItems:@[item0,item1,item2,item3,item4,item5] andSelectBlock:^(BHBItem *item, NSInteger index) {
+        NSLog(@"%ld,选中%@",(long)index,item.title);
+    }];}
 
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex

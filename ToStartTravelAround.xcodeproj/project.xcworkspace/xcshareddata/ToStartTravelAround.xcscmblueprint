@@ -6,10 +6,12 @@
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E59988F4A254E18215B1F84C879816C550D8E5D8" : 0,
     "81e2bdeb-2df8-406a-97b0-76171ac8c15f++651" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1731841B-A1AB-4014-A376-DAC360B1D1B1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E59988F4A254E18215B1F84C879816C550D8E5D8" : "ToStartTravelAround\/",
     "81e2bdeb-2df8-406a-97b0-76171ac8c15f++651" : "0815ToStartTravelAround"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ToStartTravelAround",
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/10.2.162.250\/student48",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81e2bdeb-2df8-406a-97b0-76171ac8c15f++651"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CoderHJZhao\/YaoChuFa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E59988F4A254E18215B1F84C879816C550D8E5D8"
     }
   ]
 }

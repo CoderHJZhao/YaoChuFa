@@ -435,6 +435,18 @@
 		04FF30D41B75968300A8C9DC /* reservation_arrow_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FF30BE1B75968300A8C9DC /* reservation_arrow_down@3x.png */; };
 		04FF30D71B75C67500A8C9DC /* CFDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF30D61B75C67500A8C9DC /* CFDropDownView.m */; };
 		04FF30DC1B75E20400A8C9DC /* CFAreaLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF30DB1B75E20400A8C9DC /* CFAreaLocationModel.m */; };
+		3012E38C1C42ABD200EB69F0 /* BHBBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E3751C42ABD200EB69F0 /* BHBBottomBar.m */; };
+		3012E38D1C42ABD200EB69F0 /* BHBCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E3771C42ABD200EB69F0 /* BHBCenterView.m */; };
+		3012E38E1C42ABD200EB69F0 /* BHBCustomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E3791C42ABD200EB69F0 /* BHBCustomBtn.m */; };
+		3012E38F1C42ABD200EB69F0 /* BHBItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E37B1C42ABD200EB69F0 /* BHBItem.m */; };
+		3012E3901C42ABD200EB69F0 /* BHBPlaySoundTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E37D1C42ABD200EB69F0 /* BHBPlaySoundTool.m */; };
+		3012E3911C42ABD200EB69F0 /* BHBPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E37F1C42ABD200EB69F0 /* BHBPopView.m */; };
+		3012E3921C42ABD200EB69F0 /* images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3012E3821C42ABD200EB69F0 /* images.bundle */; };
+		3012E3931C42ABD200EB69F0 /* music.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3012E3831C42ABD200EB69F0 /* music.bundle */; };
+		3012E3941C42ABD200EB69F0 /* UIButton+BHBSetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E3851C42ABD200EB69F0 /* UIButton+BHBSetImage.m */; };
+		3012E3951C42ABD200EB69F0 /* UIImage+BHBEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E3871C42ABD200EB69F0 /* UIImage+BHBEffects.m */; };
+		3012E3961C42ABD200EB69F0 /* UIImageView+BHBSetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E3891C42ABD200EB69F0 /* UIImageView+BHBSetImage.m */; };
+		3012E3971C42ABD200EB69F0 /* UIView+BHBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012E38B1C42ABD200EB69F0 /* UIView+BHBAnimation.m */; };
 		D438FAC21B70C00A00095373 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D438FAC11B70C00A00095373 /* Info.plist */; };
 		D4521D941B79E88C0079BE24 /* CFChoosenUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D4521D931B79E88C0079BE24 /* CFChoosenUtility.m */; };
 		D4521D981B79F4A60079BE24 /* CFListHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4521D971B79F4A60079BE24 /* CFListHistoryController.m */; };
@@ -1089,6 +1101,29 @@
 		04FF30D61B75C67500A8C9DC /* CFDropDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDropDownView.m; sourceTree = "<group>"; };
 		04FF30DA1B75E20400A8C9DC /* CFAreaLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFAreaLocationModel.h; sourceTree = "<group>"; };
 		04FF30DB1B75E20400A8C9DC /* CFAreaLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAreaLocationModel.m; sourceTree = "<group>"; };
+		3012E3741C42ABD200EB69F0 /* BHBBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBBottomBar.h; sourceTree = "<group>"; };
+		3012E3751C42ABD200EB69F0 /* BHBBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBBottomBar.m; sourceTree = "<group>"; };
+		3012E3761C42ABD200EB69F0 /* BHBCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBCenterView.h; sourceTree = "<group>"; };
+		3012E3771C42ABD200EB69F0 /* BHBCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBCenterView.m; sourceTree = "<group>"; };
+		3012E3781C42ABD200EB69F0 /* BHBCustomBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBCustomBtn.h; sourceTree = "<group>"; };
+		3012E3791C42ABD200EB69F0 /* BHBCustomBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBCustomBtn.m; sourceTree = "<group>"; };
+		3012E37A1C42ABD200EB69F0 /* BHBItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBItem.h; sourceTree = "<group>"; };
+		3012E37B1C42ABD200EB69F0 /* BHBItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBItem.m; sourceTree = "<group>"; };
+		3012E37C1C42ABD200EB69F0 /* BHBPlaySoundTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBPlaySoundTool.h; sourceTree = "<group>"; };
+		3012E37D1C42ABD200EB69F0 /* BHBPlaySoundTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBPlaySoundTool.m; sourceTree = "<group>"; };
+		3012E37E1C42ABD200EB69F0 /* BHBPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBPopView.h; sourceTree = "<group>"; };
+		3012E37F1C42ABD200EB69F0 /* BHBPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBPopView.m; sourceTree = "<group>"; };
+		3012E3801C42ABD200EB69F0 /* BHBSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBSingleton.h; sourceTree = "<group>"; };
+		3012E3821C42ABD200EB69F0 /* images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = images.bundle; sourceTree = "<group>"; };
+		3012E3831C42ABD200EB69F0 /* music.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = music.bundle; sourceTree = "<group>"; };
+		3012E3841C42ABD200EB69F0 /* UIButton+BHBSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BHBSetImage.h"; sourceTree = "<group>"; };
+		3012E3851C42ABD200EB69F0 /* UIButton+BHBSetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BHBSetImage.m"; sourceTree = "<group>"; };
+		3012E3861C42ABD200EB69F0 /* UIImage+BHBEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BHBEffects.h"; sourceTree = "<group>"; };
+		3012E3871C42ABD200EB69F0 /* UIImage+BHBEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BHBEffects.m"; sourceTree = "<group>"; };
+		3012E3881C42ABD200EB69F0 /* UIImageView+BHBSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BHBSetImage.h"; sourceTree = "<group>"; };
+		3012E3891C42ABD200EB69F0 /* UIImageView+BHBSetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BHBSetImage.m"; sourceTree = "<group>"; };
+		3012E38A1C42ABD200EB69F0 /* UIView+BHBAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BHBAnimation.h"; sourceTree = "<group>"; };
+		3012E38B1C42ABD200EB69F0 /* UIView+BHBAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BHBAnimation.m"; sourceTree = "<group>"; };
 		D438FAC11B70C00A00095373 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4521D921B79E88C0079BE24 /* CFChoosenUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFChoosenUtility.h; sourceTree = "<group>"; };
 		D4521D931B79E88C0079BE24 /* CFChoosenUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFChoosenUtility.m; sourceTree = "<group>"; };
@@ -1840,6 +1875,7 @@
 		04D895E61B6A2A1E009633EF /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				3012E3731C42ABD200EB69F0 /* BHBPopView */,
 				04EB66FA1B8AAA35000D79D0 /* UMSocial_Sdk_Extra_Frameworks */,
 				04EB66D01B8AA92F000D79D0 /* UMSocial_Sdk_4.2.3 */,
 				04ED1ED01B898EC600074CDB /* MJNIndexView */,
@@ -2236,6 +2272,44 @@
 			path = DropDown;
 			sourceTree = "<group>";
 		};
+		3012E3731C42ABD200EB69F0 /* BHBPopView */ = {
+			isa = PBXGroup;
+			children = (
+				3012E3741C42ABD200EB69F0 /* BHBBottomBar.h */,
+				3012E3751C42ABD200EB69F0 /* BHBBottomBar.m */,
+				3012E3761C42ABD200EB69F0 /* BHBCenterView.h */,
+				3012E3771C42ABD200EB69F0 /* BHBCenterView.m */,
+				3012E3781C42ABD200EB69F0 /* BHBCustomBtn.h */,
+				3012E3791C42ABD200EB69F0 /* BHBCustomBtn.m */,
+				3012E37A1C42ABD200EB69F0 /* BHBItem.h */,
+				3012E37B1C42ABD200EB69F0 /* BHBItem.m */,
+				3012E37C1C42ABD200EB69F0 /* BHBPlaySoundTool.h */,
+				3012E37D1C42ABD200EB69F0 /* BHBPlaySoundTool.m */,
+				3012E37E1C42ABD200EB69F0 /* BHBPopView.h */,
+				3012E37F1C42ABD200EB69F0 /* BHBPopView.m */,
+				3012E3801C42ABD200EB69F0 /* BHBSingleton.h */,
+				3012E3811C42ABD200EB69F0 /* Resource */,
+				3012E3841C42ABD200EB69F0 /* UIButton+BHBSetImage.h */,
+				3012E3851C42ABD200EB69F0 /* UIButton+BHBSetImage.m */,
+				3012E3861C42ABD200EB69F0 /* UIImage+BHBEffects.h */,
+				3012E3871C42ABD200EB69F0 /* UIImage+BHBEffects.m */,
+				3012E3881C42ABD200EB69F0 /* UIImageView+BHBSetImage.h */,
+				3012E3891C42ABD200EB69F0 /* UIImageView+BHBSetImage.m */,
+				3012E38A1C42ABD200EB69F0 /* UIView+BHBAnimation.h */,
+				3012E38B1C42ABD200EB69F0 /* UIView+BHBAnimation.m */,
+			);
+			path = BHBPopView;
+			sourceTree = "<group>";
+		};
+		3012E3811C42ABD200EB69F0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3012E3821C42ABD200EB69F0 /* images.bundle */,
+				3012E3831C42ABD200EB69F0 /* music.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		D4521D8D1B79E2D40079BE24 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2575,7 +2649,7 @@
 				TargetAttributes = {
 					04D895611B6A231C009633EF = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = T8EV9DC78A;
+						DevelopmentTeam = HE3X3KX87G;
 					};
 				};
 			};
@@ -2673,6 +2747,7 @@
 				D4A8E5341B6A885300BF4BA5 /* my_list_share_icon@2x.png in Resources */,
 				04D896411B6A2C8A009633EF /* tab_bar_discover_icon_current@2x.png in Resources */,
 				04D896521B6A2C8A009633EF /* tab_bar_my_tips_icon.png in Resources */,
+				3012E3921C42ABD200EB69F0 /* images.bundle in Resources */,
 				04725E261B78479400F1F17E /* detail_picture_fullscreent_rotate_cross_disable_btn@2x.png in Resources */,
 				04F019901B7983A40017E21F /* CFRegisterView.xib in Resources */,
 				048E5C621B6EFB4D008A96E9 /* login_cellphone_icon@3x.png in Resources */,
@@ -2887,6 +2962,7 @@
 				04725E2A1B78479400F1F17E /* detail_picture_fullscreent_share_btn@3x.png in Resources */,
 				04F019D41B79FC9F0017E21F /* order_submit_arrow@3x.png in Resources */,
 				04D896891B6A2F1E009633EF /* my_nav_bar_message_icon@2x.png in Resources */,
+				3012E3931C42ABD200EB69F0 /* music.bundle in Resources */,
 				04FF30D01B75968300A8C9DC /* DownArrow.png in Resources */,
 				04AD949C1B788C84008D53AF /* logo-Gray@2x.png in Resources */,
 				04EB66EE1B8AA930000D79D0 /* UMSCommentInputController.xib in Resources */,
@@ -2951,6 +3027,8 @@
 				04E509811B6B664300762E13 /* README.md in Sources */,
 				04958D9D1B71E0FE00877030 /* MJRefreshComponent.m in Sources */,
 				04E509871B6B664300762E13 /* UIRefreshControl+AFNetworking.m in Sources */,
+				3012E3901C42ABD200EB69F0 /* BHBPlaySoundTool.m in Sources */,
+				3012E3911C42ABD200EB69F0 /* BHBPopView.m in Sources */,
 				04958D641B71E0AD00877030 /* CFMainPageModel.m in Sources */,
 				049239A21B74BB2800DC8EEA /* CFSelectCityModel.m in Sources */,
 				046448EA1B6CB4F60017F06D /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -2968,6 +3046,7 @@
 				04F0198C1B7983A40017E21F /* CFOwnButton.m in Sources */,
 				04958DA11B71E0FE00877030 /* MJRefreshAutoNormalFooter.m in Sources */,
 				049239A51B74BB6700DC8EEA /* CFVSelectCityView.m in Sources */,
+				3012E38C1C42ABD200EB69F0 /* BHBBottomBar.m in Sources */,
 				04E509151B6B619E00762E13 /* CFNetWork.m in Sources */,
 				D45D1F8F1B7A4E2A00AA42DC /* CFCollectionController.m in Sources */,
 				046448E31B6CB4F60017F06D /* MASCompositeConstraint.m in Sources */,
@@ -3004,6 +3083,7 @@
 				04E509801B6B664300762E13 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04E509B71B6B6BEC00762E13 /* UIImage+WebP.m in Sources */,
 				04D1382F1B738E1F000F66F8 /* EasyJSDataFunction.m in Sources */,
+				3012E3961C42ABD200EB69F0 /* UIImageView+BHBSetImage.m in Sources */,
 				04D138301B738E1F000F66F8 /* EasyJSWebView.m in Sources */,
 				04F019CD1B79FAFA0017E21F /* CFStarTableViewCell.m in Sources */,
 				04E509B21B6B6BEC00762E13 /* SDWebImageManager.m in Sources */,
@@ -3028,11 +3108,13 @@
 				04958DAB1B71E0FE00877030 /* UIScrollView+MJExtension.m in Sources */,
 				04958D9B1B71E0FE00877030 /* MJRefreshAutoFooter.m in Sources */,
 				04E509AF1B6B6BEC00762E13 /* SDWebImageDecoder.m in Sources */,
+				3012E3971C42ABD200EB69F0 /* UIView+BHBAnimation.m in Sources */,
 				D4976C1A1B704609003F0DA6 /* FMResultSet.m in Sources */,
 				04958D6A1B71E0AD00877030 /* CFThirdTableViewCell.m in Sources */,
 				04E509B81B6B6BEC00762E13 /* UIImageView+HighlightedWebCache.m in Sources */,
 				04F0198D1B7983A40017E21F /* CFPointCell1.m in Sources */,
 				04E509781B6B664300762E13 /* AFHTTPRequestOperationManager.m in Sources */,
+				3012E38D1C42ABD200EB69F0 /* BHBCenterView.m in Sources */,
 				04F019D71B7A288C0017E21F /* CFMapViewController.m in Sources */,
 				04958D9F1B71E0FE00877030 /* MJRefreshHeader.m in Sources */,
 				046448E41B6CB4F60017F06D /* MASConstraint.m in Sources */,
@@ -3047,10 +3129,14 @@
 				049239B51B74D07D00DC8EEA /* CFHistoryCityViewCell.m in Sources */,
 				0492399F1B74BAFC00DC8EEA /* CFSelectCityViewController.m in Sources */,
 				04958D691B71E0AD00877030 /* CFSecondViewCell.m in Sources */,
+				3012E38E1C42ABD200EB69F0 /* BHBCustomBtn.m in Sources */,
 				D4A8E50A1B6A790C00BF4BA5 /* CFParentView.m in Sources */,
 				04E509B91B6B6BEC00762E13 /* UIImageView+WebCache.m in Sources */,
+				3012E3941C42ABD200EB69F0 /* UIButton+BHBSetImage.m in Sources */,
+				3012E38F1C42ABD200EB69F0 /* BHBItem.m in Sources */,
 				04958DAC1B71E0FE00877030 /* UIScrollView+MJRefresh.m in Sources */,
 				04F0197F1B7983A40017E21F /* MyJSInterface.m in Sources */,
+				3012E3951C42ABD200EB69F0 /* UIImage+BHBEffects.m in Sources */,
 				04725DA81B783FE700F1F17E /* CFDetailViewController.m in Sources */,
 				04958DA21B71E0FE00877030 /* MJRefreshAutoStateFooter.m in Sources */,
 				04F0197E1B7983A40017E21F /* CTWebViewCtrl.m in Sources */,
@@ -3210,8 +3296,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ToStartTravelAround/Utitiles/CFMacro.pch;
 				INFOPLIST_FILE = ToStartTravelAround/Info.plist;
@@ -3226,8 +3313,9 @@
 					"$(PROJECT_DIR)/ToStartTravelAround/ThirdLib/UMSocial_Sdk_Extra_Frameworks/YiXin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = net.doyouhike.bbs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d6c537f6-6f61-49a4-be02-7eedb8f7860e";
 			};
 			name = Debug;
 		};
@@ -3236,8 +3324,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ToStartTravelAround/Utitiles/CFMacro.pch;
 				INFOPLIST_FILE = ToStartTravelAround/Info.plist;
@@ -3252,8 +3341,9 @@
 					"$(PROJECT_DIR)/ToStartTravelAround/ThirdLib/UMSocial_Sdk_Extra_Frameworks/YiXin",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = net.doyouhike.bbs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d6c537f6-6f61-49a4-be02-7eedb8f7860e";
 			};
 			name = Release;
 		};
