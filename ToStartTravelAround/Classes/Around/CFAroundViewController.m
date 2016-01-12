@@ -13,10 +13,14 @@
 #import "CFThirdTableViewCell.h"
 #import "CFDetailViewController.h"
 #import "CFSearchController.h"
+#import "CFLoadDataView.h"
+#import "UIImage+GIF.h"
+
 @interface CFAroundViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     CFVAroundView *_aroundView;
     NSArray *_aroundDataArr;
+    CFLoadDataView *_loadView;
 
 }
 @property(nonatomic,strong)CFDropDownView *dropDownView;
@@ -30,12 +34,13 @@
 #pragma mark =====================视图相关=========================
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self createView];
     [self createNavSearchButton];
     [self createCover];
     [self createDropDownView];
     [self createBtn];
-
+    [self createLoadDataAnimation];
     [self aroundDataRequest];
 
 }
@@ -48,6 +53,20 @@
     _sender.selected = NO;
 
 }
+- (void)createLoadDataAnimation
+{
+    _loadView = [[CFLoadDataView alloc]initWithFrame:self.view.bounds];
+    _loadView.backgroundColor = [UIColor whiteColor];
+    //    [_loadView bringSubviewToFront:_bannerView];
+    
+    NSString *imageFilePath = [[NSBundle mainBundle]pathForResource:@"pull_refreshing_icon.gif" ofType:nil];
+    NSData *imageData = [NSData dataWithContentsOfFile:imageFilePath];
+    _loadView.animationImageView.image  = [UIImage sd_animatedGIFWithData:imageData];
+    [_loadView addSubview:_loadView.animationImageView];
+    
+    [self.view addSubview:_loadView];
+}
+
 //创建下拉菜单
 - (void)createDropDownView
 {
@@ -203,8 +222,25 @@
     {
         _aroundDataArr = responseObject;
         [_aroundView.tableView reloadData];
+        //移除加载视图
+        [UIView animateWithDuration:1.5 animations:^{
+            _loadView.alpha = 0;
+        }];
+        //延迟操作
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [_loadView removeFromSuperview];
+        });
+
     } orFail:^(id responseObject) {
-        
+        //移除加载视图
+        [UIView animateWithDuration:1.5 animations:^{
+            _loadView.alpha = 0;
+        }];
+        //延迟操作
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [_loadView removeFromSuperview];
+        });
+
     }];
 
 }
